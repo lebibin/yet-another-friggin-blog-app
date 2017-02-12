@@ -63,6 +63,17 @@ describe Post do
     end
   end
 
+  describe "#picture?" do
+    it "is true when the post has a picture URL" do
+      @it.image_url = "http://example.org/foo.png"
+      assert(@it.picture?)
+    end
+    it "is false when the post has no picture URL" do
+      @it.image_url = ""
+      refute(@it.picture?)
+    end
+  end
+
   describe "#pubdate" do
     describe "before publishing" do
       it "is blank" do

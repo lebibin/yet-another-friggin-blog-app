@@ -1,3 +1,4 @@
+<% entry = exhibit(entry, self) %>
 <article>
   <header>
     <p>
@@ -10,6 +11,6 @@
     </h3>
   </header>
   <p>
-    <%= entry.body %>
+    <%= entry.render_body %>
   </p>
 </article>

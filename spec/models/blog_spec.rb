@@ -1,4 +1,4 @@
-require 'ostruct'
+require "ostruct"
 require "minitest/autorun"
 require_relative "../spec_helper_lite"
 require_relative "../../app/models/blog"

@@ -3,7 +3,7 @@ class Post
   extend ActiveModel::Naming
   include ActiveModel::Conversion
   include ActiveModel::Validations
-  attr_accessor :title, :body, :blog, :pubdate
+  attr_accessor :blog, :body, :image_url, :pubdate, :title
   validates :title, presence: true
   def initialize(attrs={})
     attrs.each do |k, v|
@@ -19,5 +19,9 @@ class Post
 
   def persisted?
     false
+  end
+
+  def picture?
+    image_url.present?
   end
 end
