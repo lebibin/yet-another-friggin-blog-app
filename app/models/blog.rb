@@ -21,6 +21,7 @@ class Blog
   def entries
     @entries.sort_by{|e| e.pubdate}.reverse.take(10)
   end
+
   private
 
   def post_source
