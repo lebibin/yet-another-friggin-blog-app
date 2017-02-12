@@ -6,5 +6,6 @@ require File.expand_path('../config/application', __FILE__)
 Rails.application.load_tasks
 
 task :default do
-  Dir["spec/**/*_spec.rb"].each{|s| load s }
+  # http://stackoverflow.com/a/6976052
+  FileList["./spec/**/*_spec.rb"].each { |file| ruby file }
 end
