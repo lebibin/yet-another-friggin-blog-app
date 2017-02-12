@@ -18,6 +18,7 @@ class Blog
   def add_entry(post)
     entries << post
   end
+
   private
 
   def post_source
